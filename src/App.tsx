@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import {Layout} from './components/layout/Layout';
+import {LoginLayout} from './components/layout/LoginLayout';
+import {LeftNavLayout} from './components/layout/LeftNavLayout';
+import {DashboardPage} from "./components/pages/DashboardPage";
+import {PageA} from "./components/dashboard/PageA";
+import {PageB} from "./components/dashboard/PageB";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={ <LoginLayout /> } />
+            <Route path='/dashboard' element={ <Layout /> } >
+                <Route index element={ <DashboardPage /> }/>
+                <Route path="page-a" element={ <PageA /> }/>
+                <Route path="page-b" element={ <PageB /> }/>
+                <Route path='nav' element={ <LeftNavLayout /> } />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </>
   );
 }
 
