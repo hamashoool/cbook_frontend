@@ -22,18 +22,6 @@ export const Sidebar = ({  }: Props) => {
                 <Divider />
                 <SidebarTitle title="Navigation Menu" isOn={isOpen} />
                 <SidebarMenu icon={<BsPlus size="32" />} text="Plus" text_type={isOpen}  />
-                <Divider />
-                <SidebarTitle title="Navigation Menu" isOn={isOpen} />
-                <SidebarMenu icon={<BsPlus size="32" />} text="Plus" text_type={isOpen}  />
-                <Divider />
-                <SidebarTitle title="Navigation Menu" isOn={isOpen} />
-                <SidebarMenu icon={<BsFillLightningFill size="20"/>} text="Action" text_type={isOpen} />
-                <SidebarMenu icon={<BsGearFill size="19"/>} text="Settings" text_type={isOpen}/>
-                <SidebarMenu icon={<BsApple size="20"/>} text="Apple" text_type={isOpen}/>
-                <Divider />
-                <SidebarTitle title="Navigation Menu" isOn={isOpen} />
-                <SidebarMenu icon={<BsPlus size="32" />} text="Plus" text_type={isOpen}  />
-                <Divider />
             </div>
         </div>
     );
