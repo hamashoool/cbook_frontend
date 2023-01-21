@@ -16,12 +16,11 @@
 }
 
 @layer components {
-
   .anim {
     @apply transition-all duration-1000 ease-in-out;
   }
 
-  .sidebar-container{
+  .sidebar-container {
     @apply fixed top-0 left-0 h-screen m-0 flex flex-col bg-gray-200 dark:bg-gray-800 text-gray-50 shadow anim
     overflow-y-scroll thinScrollbar;
   }
@@ -33,7 +32,7 @@
     text-primary-600 dark:text-primary-500 hover:text-white
     hover:rounded-xl rounded-3xl hover:bg-primary-600 dark:hover:bg-primary-500 dark:hover:text-white
     transition-all duration-300 ease-linear
-    cursor-pointer shadow-lg ;
+    cursor-pointer shadow-lg;
   }
 
   .sidebar-tooltip {
@@ -228,7 +227,7 @@
   .dropdown-selection-text {
     @apply text-gray-500 font-semibold tracking-wide
     mr-auto
-    transition duration-300 ease-in-out
+    transition duration-300 ease-in-out 
     hover:text-pink-500 dark:hover:text-gray-500
     cursor-pointer;
   }
@@ -238,7 +237,7 @@
   }
 
   .thinScrollbar::-webkit-scrollbar {
-    @apply !w-[5px] !h-[5px]
+    @apply !w-[5px] !h-[5px];
   }
 
   .text-color {
@@ -251,7 +250,7 @@
     transition duration-300 ease-in-out
     cursor-pointer;
   }
-  
+
   .btn-primary {
     @apply bg-primary-500 dark:bg-primary-700 text-white hover:bg-primary-700 dark:hover:bg-primary-500;
   }
@@ -263,6 +262,10 @@
   .btn-tertiary {
     @apply bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-gray-500;
   }
+
+  /* .radio {
+    @apply w-5 h-5 rounded-full;
+  } */
 }
 
 @tailwind utilities;
